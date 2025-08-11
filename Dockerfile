@@ -18,7 +18,7 @@ COPY requirements.txt ./
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copiar código
-COPY app ./app
+COPY main.py ./
 
 # Expor porta
 EXPOSE 8000
@@ -28,4 +28,4 @@ RUN useradd -m appuser && chown -R appuser:appuser $APP_HOME
 USER appuser
 
 # Comando de execução
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

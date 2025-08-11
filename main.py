@@ -12,7 +12,6 @@ def root():
 
 @app.get("/env")
 def get_env():
-    # Convert os.environ (mapping) to a regular dict (values as strings)
     return {k: v for k, v in os.environ.items()}
 
 
