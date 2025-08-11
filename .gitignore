@@ -1,0 +1,40 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.pyd
+*.pyo
+*.pdb
+*.egg-info/
+
+# Test/coverage
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Envs
+.env
+.env.*
+
+# VSCode
+.vscode/
+
+# Docker
+*.log
+dist/
+build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Others
+*.sqlite3
+*.db
+
+# Ignore compiled tests
+/tests/__pycache__/
+/app/__pycache__/
