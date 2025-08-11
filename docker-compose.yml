@@ -1,0 +1,14 @@
+version: '3.9'
+services:
+  web:
+    build: .
+    image: simplepythonapp:latest
+    container_name: simplepythonapp_web
+    ports:
+      - "8000:8000"
+    environment:
+      # Exemplo de variável custom
+      APP_MESSAGE: "Hello from docker-compose"
+    env_file:
+      - .env
+    restart: unless-stopped
